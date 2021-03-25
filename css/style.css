@@ -9,26 +9,122 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1, h2, h3, h4 {
+  color: #FFF;
+}
+
 .clearfix::after {
   content: '';
   display: table;
   clear: both;
 }
 
+main .aside-bar .aside-menu ul li a:hover,
+main .aside-bar .playlists ul li a:hover,
+main .main-covers nav ul li a:hover {
+  color: #FFF
+}
+
+
+/* MAIN */
 main {
   height: calc(100vh - 90px);
   
 }
 
+/* ASIDE BAR */
 main .aside-bar {
   float: left;
   width: 200px;
   height: 100%;
-  background-color: blue;
+  padding: 20px 20px;
+  background-color: #000;
 }
 
+main .aside-bar .logo {
+  width: 80%;
+  padding-bottom: 20px;
+}
+
+main .aside-bar .logo img {
+  width: 100%;
+}
+
+/* ASIDE MENU */
+main .aside-bar .aside-menu ul li {
+  height: 30px;
+  width: 100%;
+  display: inline-block;
+}
+
+main .aside-bar .aside-menu ul li a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #6D6D6D;
+  font-weight: 600;
+  font-size: 90%;
+}
+
+main .aside-bar .aside-menu ul li a.active::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  height: 100%;
+  width: 2px;
+  background-color: #B7FF33;
+}
+
+main .aside-bar .aside-menu ul li a img {
+  height: 30px;
+  padding-right: 5px;
+}
+
+/* ASIDE PLAYLISTS */
+main .aside-bar .playlists {
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+main .aside-bar .playlists h3 {
+  text-transform: uppercase;
+  font-size: 90%;
+  margin-bottom: 15px;
+}
+
+main .aside-bar .playlists ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #6D6D6D;
+  font-weight: 600;
+  padding: 7px 0;
+  font-size: 90%;
+}
+
+main .aside-bar .playlists ul li a .add {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background-color: #A3A3A3;
+  color: #000;
+  margin-right: 10px;
+}
+
+/* ASIDE PROFILE */
+/* main .aside-bar .profile {
+  height: 80px;
+  background-color: aqua;
+} */
+
+/* COVERS */
 main .main-covers {
-  background-color: maroon;
+  background-color: #141922;
   width: calc(100% - 200px);
   height: 100%;
   overflow-y: auto;
@@ -40,19 +136,102 @@ main .main-covers .call-to-action {
   right: 0;
   width: calc(100% - 200px);
   height: 90px;
+  padding-right: 40px;
   background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#upgrade {
+  padding: 10px 30px;
+  border: 1px solid #FFF;
+  border-radius: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 80%;
+}
+
+#upgrade:hover {
+  transform: scale(1.1);
+}
+
+main .main-covers nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  margin-top: 90px;
+}
+
+main .main-covers nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+main .main-covers nav ul li a {
+  position: relative;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 80%;
+  font-weight: 600;
+  color: #7F8387;
+}
+
+main .main-covers nav ul li a.active::after  {
+  content: '';
+  position: absolute;
+  width: 25%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #B7FF33;
 }
 
 main .main-covers .debug-content {
-  padding-top: 90px;
   width: 100%;
+  padding:30px;
+  color: #FFF;
 }
 
+
+/* FOOTER */
 footer {
+  display: flex;
+  justify-content: space-between;
   height: 90px;
-  background-color: aqua;
+  background-color: #282828;
 }
 
+footer .song-info,
+footer .volume {
+  width: 200px;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+footer .song-info {
+  flex-shrink: 2;
+}
+
+footer .volume {
+  flex-shrink: 0;
+}
+
+footer .player {
+  width: 60%;
+  height: 100%;
+  flex-shrink: 1;
+  background-color: bisque;
+}
+
+/* MEDIA */
 @media screen and (max-width: 680px) {
   main .aside-bar {
     width: 50px;
