@@ -26,7 +26,7 @@ main::after {
 
 main .aside-bar .aside-menu ul li a:hover,
 main .aside-bar .aside-playlists ul li a:hover,
-main .main-covers nav ul li a:hover,
+main .main-container nav ul li a:hover,
 main .aside-bar .aside-bar-bottom a:hover {
   color: #FFF
 }
@@ -48,7 +48,7 @@ main .aside-bar {
 
 main .aside-bar .aside-bar-top {
   height: calc(100% - 80px);
-  background-color: blue;
+  background-color: #000;
   overflow: hidden;
 }
 
@@ -93,12 +93,13 @@ main .aside-bar .aside-menu ul li a img {
 /* ASIDE PLAYLISTS */
 main .aside-bar .aside-bar-top .aside-playlists {
   padding: 20px;
+  overflow-y: auto;
 }
 
 main .aside-bar .aside-bar-top .aside-playlists ul {
   list-style: none;
   padding-top: 10px;
-  overflow-y: auto;
+  
 }
 
 main .aside-bar .aside-playlists ul li {
@@ -131,7 +132,6 @@ main .aside-bar .aside-playlists ul li a.add::before {
 main .aside-bar .aside-bar-bottom {
   height: 80px;
   width: 200px;
-  
   background-color: #B7FF33;
 }
 
