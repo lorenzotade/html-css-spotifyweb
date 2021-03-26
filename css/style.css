@@ -44,20 +44,28 @@ main .aside-bar {
   float: left;
   width: 200px;
   height: 100%;
+  
 }
 
 main .aside-bar .aside-bar-top {
   height: calc(100% - 80px);
   background-color: #000;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
 main .aside-bar .aside-bar-top .logo-img {
   padding:20px;
+  flex-shrink: 0;
 }
 
 
 /* ASIDE MENU */
+main .aside-bar .aside-menu {
+  flex-shrink: 0;
+}
+
 main .aside-bar .aside-menu ul li {
   height: 30px;
   width: 100%;
@@ -93,6 +101,9 @@ main .aside-bar .aside-menu ul li a img {
 /* ASIDE PLAYLISTS */
 main .aside-bar .aside-bar-top .aside-playlists {
   padding: 20px;
+  max-height: 260px;
+  flex-shrink: 1;
+  max-height: 100%;
   overflow-y: auto;
 }
 
