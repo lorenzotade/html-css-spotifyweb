@@ -4,26 +4,21 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Montserrat', sans-serif;
 }
-
 .wrapper {
   width: 100%;
   height: 100vh;
 }
-
 h1, h2, h3, h4, h5 {
   color: #FFF;
 }
-
 main::after {
   content: '';
   display: table;
   clear: both;
 }
-
 main .aside-bar .aside-menu ul li a:hover,
 main .aside-bar .aside-playlists ul li a:hover,
 main .main-container nav ul li a:hover,
@@ -44,9 +39,7 @@ main .aside-bar {
   float: left;
   width: 200px;
   height: 100%;
-  
 }
-
 main .aside-bar .aside-bar-top {
   height: calc(100% - 80px);
   background-color: #000;
@@ -54,11 +47,9 @@ main .aside-bar .aside-bar-top {
   flex-direction: column;
   overflow: hidden;
 }
-
 main .aside-bar .aside-bar-top .logo-img {
   padding:20px;
 }
-
 main .aside-bar .aside-bar-top .logo-img-small {
   margin: 8px;
   width: 35px;
@@ -69,16 +60,24 @@ main .aside-bar .aside-bar-top .logo-img-small {
 main .aside-bar .aside-menu-small {
   display: none;
   height: 30px;
-  margin: 8px
+  margin: 8px;
 }
-
+main .aside-bar .aside-menu-small ul li a img {
+  opacity: .55;
+}
+main .aside-bar .aside-menu-small ul li a.active img {
+  opacity: 1;
+}
+main .aside-bar .aside-menu-small a:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
 main .aside-bar .aside-menu ul li {
   height: 30px;
   width: 100%;
   display: inline-block;
   padding-left: 20px;
 }
-
 main .aside-bar .aside-menu ul li a {
   display: flex;
   align-items: center;
@@ -89,7 +88,6 @@ main .aside-bar .aside-menu ul li a {
   font-weight: 600;
   font-size: 90%;
 }
-
 main .aside-bar .aside-menu ul li a.active::before {
   content: '';
   position: absolute;
@@ -98,10 +96,18 @@ main .aside-bar .aside-menu ul li a.active::before {
   width: 2px;
   background-color: #B7FF33;
 }
-
 main .aside-bar .aside-menu ul li a img {
   height: 30px;
   padding-right: 5px;
+  opacity: .55;
+}
+main .aside-bar .aside-menu ul li a.active img,
+main .aside-bar .aside-menu ul li a.active {
+  color: #FFF;
+  opacity: 1;
+}
+main .aside-bar .aside-menu ul li a:hover img {
+  opacity: 1;
 }
 
 /* ASIDE PLAYLISTS */
@@ -111,24 +117,20 @@ main .aside-bar .aside-bar-top .aside-playlists {
   max-height: 100%;
   overflow-y: hidden;
 }
-
 main .aside-bar .aside-bar-top .aside-playlists h3 {
   text-transform: uppercase;
   font-size: 100%;
 }
-
 main .aside-bar .aside-bar-top .aside-playlists ul {
   list-style: none;
   padding-top: 5px;
   max-height: 90%;
   overflow-y: auto;
 }
-
 main .aside-bar .aside-playlists ul li {
   width: 100%;
   padding-top: 10px;
 }
-
 main .aside-bar .aside-playlists ul li a {
   display: flex;
   align-items: center;
@@ -137,7 +139,6 @@ main .aside-bar .aside-playlists ul li a {
   font-weight: 600;
   font-size: 90%;
 }
-
 main .aside-bar .aside-playlists ul li a.add::before {
   content: '+';
   height: 40px;
@@ -156,22 +157,18 @@ main .aside-bar .aside-bar-bottom {
   width: 200px;
   background-color: #000;
 }
-
 main .aside-bar .aside-bar-bottom {
   height: 80px;
   width: 200px;
   padding-top: 10px;
   padding-left: 20px;
 }
-
 main .aside-bar .aside-bar-bottom a{
   text-decoration: none;
   color: #6D6D6D;
   font-size: 80%;
   font-weight: 600;
 }
-
-
 main .aside-bar .aside-bar-bottom .install {
   display: flex;
   align-items: center;
@@ -180,12 +177,10 @@ main .aside-bar .aside-bar-bottom .install {
   padding-bottom: 10px;
   border-bottom: 1px solid #6D6D6D;
 }
-
 main .aside-bar .aside-bar-bottom .install img {
   height: 15px;
   padding-right: 5px;
 }
-
 main .aside-bar .aside-bar-bottom .profile {
   display: flex;
   align-items: center;
@@ -193,7 +188,6 @@ main .aside-bar .aside-bar-bottom .profile {
   width: 100%;
   padding-top: 10px;
 }
-
 main .aside-bar .aside-bar-bottom .profile img {
   height: 20px;
   width: 20px;
@@ -210,7 +204,6 @@ main .main-container {
   height: 100%;
   overflow-y: auto;
 }
-
 main .main-container .call-to-action {
   position: fixed;
   z-index: 999;
@@ -222,7 +215,6 @@ main .main-container .call-to-action {
   align-items: center;
   justify-content: flex-end;
 }
-
 #upgrade {
   padding: 10px 30px;
   border: 1px solid #FFF;
@@ -232,7 +224,6 @@ main .main-container .call-to-action {
   color: #FFF;
   font-size: 80%;
 }
-
 #upgrade:hover {
   transform: scale(1.1);
 }
@@ -246,14 +237,12 @@ main .main-container nav {
   width: 100%;
   margin-top: 90px;
 }
-
 main .main-container nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
 }
-
 main .main-container nav ul li a {
   position: relative;
   padding: 5px 15px;
@@ -263,7 +252,6 @@ main .main-container nav ul li a {
   font-weight: 600;
   color: #7F8387;
 }
-
 main .main-container nav ul li a.active::after  {
   content: '';
   position: absolute;
@@ -279,32 +267,27 @@ main .main-container nav ul li a.active::after  {
 main .main-container .covers {
   padding: 20px;
 }
-
 main .main-container .covers ul {
   padding-top: 20px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
-
 main .main-container .covers ul li {
   width: calc(100% / 6);
   padding: 0 5px;
   margin-bottom: 10px;
 }
-
 main .main-container .covers ul li .record {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 main .main-container .covers ul li .record .record-img {
   position: relative;
   margin-bottom: 10px;
 }
-
 main .main-container .covers ul li .record .record-img .overlay {
   position: absolute;
   display: none;
@@ -316,35 +299,29 @@ main .main-container .covers ul li .record .record-img .overlay {
   font-size: 40px;
   background-color: rgba(0,0,0,0.6);
 }
-
 main .main-container .covers ul li .record .record-img .overlay i {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 main .main-container .covers ul li .record .record-img:hover .overlay {
   display: block;
   cursor: pointer;
 }
-
 main .main-container .covers ul li img {
   width: 100%;
 }
-
 main .main-container .covers span {
   color: #6D6D6D;
   font-size: 80%;
   font-weight: 600;
   padding-top: 5px;
 }
-
 main .main-container .covers .created,
 main .main-container .covers .popular {
   padding-top: 30px;
 }
-
 main .main-container .covers .popular img,
 main .main-container .covers .popular .overlay {
   border-radius: 50%;
@@ -359,7 +336,6 @@ footer .player {
   padding: 10px;
   background-color: #282828;
 }
-
 footer .player-song,
 footer .player-volume {
   display: flex;
@@ -369,7 +345,6 @@ footer .player-volume {
   min-width: 130px;
   height: 100%;
 }
-
 footer .progress {
   display: flex;
   justify-content: flex-end;
@@ -379,15 +354,12 @@ footer .progress {
   border-radius: 1.5px;
   background-color: #FFF;
 }
-
 footer .progress:hover {
   background-color: #B7FF33;
 }
-
 footer .progress:hover .dot {
   display: block;
 }
-
 .progress .dot {
   display: none;
   width: 10px;
@@ -404,38 +376,31 @@ footer .player-song {
   font-size: 80%;
   flex-shrink: 2;
 }
-
 footer .player-song .song-img {
   width: 22%;
   margin-right: 10px;
   flex-shrink: 0;
 }
-
 footer .player-song .song-img img {
   width: 100%;
 }
-
 footer .player-song .song-info p,
 footer .player-song .song-info h4 {
   text-overflow: ellipsis;
 }
-
 footer .player-song .song-info p {
   font-size: 85%;
   color: #6D6D6D;
 }
-
 footer .player-song .song-commands {
   flex-wrap: wrap;
   flex-direction: column;
   color: #6D6D6D;
   margin-left: 20px;
 }
-
 footer .player-song .song-commands i {
   padding: 0 2px;
 }
-
 footer .player-song .song-commands i:hover {
   cursor: pointer;
   color: #FFF;
@@ -447,11 +412,9 @@ footer .player-volume {
   font-size: 80%;
   justify-content: center;
 }
-
 footer .player .player-volume i {
   padding: 0 5px;
 }
-
 footer .player .player-volume .volume-bar {
   width: 50%;
   height: 3px;
@@ -471,38 +434,31 @@ footer .player-control {
   padding: 0 10px;
   flex-shrink: 1;
 }
-
 footer .player-control .control-commands {
   display: flex;
   align-items: center;
 }
-
 footer .player-control .control-commands i {
   padding: 0 7px;
   color: #FFF;
 }
-
 footer .player-control .control-commands i.far {
   font-size: 150%;
 }
-
 footer .player-control .control-commands i.far:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
-
 footer .player-control .time-and-space {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 footer .player-control .time-and-space span {
   color: #FFF;
   font-size: 60%;
 }
-
 footer .player-control .player-bar {
   width: 60%;
   height: 3px;
@@ -517,6 +473,7 @@ footer .player-control .player-bar {
     width: calc(100% / 4);
   }
 }
+
 @media screen and (max-width: 768px) {
   main .main-container .covers ul li {
     width: calc(100% / 2);
@@ -527,24 +484,19 @@ footer .player-control .player-bar {
   main .aside-bar {
     width: 50px;
   }
-
   main .main-container,
   main .main-container .call-to-action {
     width: calc(100% - 50px);
   }
-
   main .aside-bar .aside-bar-top .logo-img-small {
     display: block;
   }
-
   main .aside-bar .aside-bar-top .logo-img {
     display: none;
   }
-
   main .aside-bar .aside-menu {
     display: none;
   }
-
   main .aside-bar .aside-playlists {
     display: none;
   }
@@ -552,18 +504,15 @@ footer .player-control .player-bar {
   main .aside-bar .aside-bar-bottom .profile {
     display: none;
   }
-
   main .aside-bar .aside-menu-small {
     display: block;
   }
-
 }
 
 @media screen and (max-height: 400px) {
   main .aside-bar .aside-bar-bottom {
     display: none;
   }
-
   main .aside-bar .aside-bar-top {
     height: 100%;
   }
